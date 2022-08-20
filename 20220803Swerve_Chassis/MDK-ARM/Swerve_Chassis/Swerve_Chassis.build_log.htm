@@ -1,0 +1,71 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.28.0.0
+Copyright (C) 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 1111111 DELL, 11111111111, LIC=DSNVE-52500-KT53H-WZIQL-68JH8-AGFFV
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.28.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.28.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      CMSIS_AGDI.dll V1.31.18.0
+Dialog DLL:      TCM.DLL V1.36.2.0
+ 
+<h2>Project:</h2>
+E:\电控\电控备份\Infantry\Swerve_Infantry\Chassis\20220803Swerve_Chassis\MDK-ARM\Swerve_Chassis.uvprojx
+Project File Date:  03/24/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'Swerve_Chassis'
+compiling chassis_task.c...
+..\User\Task\Chassis\chassis_task.c(189): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			    chassis_pid->chassis_motor[i].speed_set=0.8*chassis_pid->chassis_motor[i].speed_set;//该限幅是在地胶平地上测试得出的结果，后续需在起伏路段上测试后修正参数
+..\User\Task\Chassis\chassis_task.c(193): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			    chassis_pid->chassis_motor[i].speed_set=0.6*chassis_pid->chassis_motor[i].speed_set;//该限幅是在地胶平地上测试得出的结果，后续需在起伏路段上测试后修正参数
+..\User\Task\Chassis\chassis_task.c: 2 warnings, 0 errors
+compiling sewrve_task.c...
+..\User\Task\Swerve\sewrve_task.c(228): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			if(swerve_set->chassis_yaw_relative_angle>0.1 || swerve_set->chassis_yaw_relative_angle<-0.1)
+..\User\Task\Swerve\sewrve_task.c(427): warning:  #177-D: function "Swerve_AnglePID_Calculate"  was declared but never referenced
+  static float Swerve_AnglePID_Calculate(PID_Regulator_t *pid , float fdb, float set)
+..\User\Task\Swerve\sewrve_task.c: 2 warnings, 0 errors
+linking...
+Program Size: Code=29540 RO-data=2968 RW-data=248 ZI-data=28632  
+FromELF: creating hex file...
+"Swerve_Chassis\Swerve_Chassis.axf" - 0 Error(s), 4 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.5.1.pack
+                ARM.CMSIS.5.5.1
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.2.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.14.0.pack
+                Keil.STM32F4xx_DFP.2.14.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Swerve_Chassis
+  C:\Apps\keil\ARM\CMSIS\5.5.1\CMSIS\Core\Include
+  C:\Apps\keil\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.2.0
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>
